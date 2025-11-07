@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker-Games - The Black Packet</title>
+   <script>
+        if (window.self === window.top) {
+            const originalPath = window.location.pathname + window.location.search;
+            window.location.href = '/desktop.html#' + originalPath;
+        }
+    </script>
+<style>
+        @media (max-width: 768px) {
+            .hardware-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+                       .status-bar {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            } 
+            .nav-links {
+                align-items: center;
+                gap: 10px;
+            }
+        }
+</style>
+    <link rel="stylesheet" href="/desktop-style.css">
+
+</head>
+<body>
+    <div class="matrix-rain" id="matrixRain"></div>
+    
+    <div class="container">
+        
+        <div class="status-bar">
+            <div class="status-item">STATUS: <span class="flashing">GAMING</span></div>
+            <div class="status-item"></div>
+            <div class="status-item">GAMES: 4</div>
+        </div>
+        
+        <div class="games-grid">
+            <div class="game-card">
+                <h2 class="game-title">IDENTITY THEFT <span class="difficulty-badge difficulty-intermediate">INTERMEDIATE</span></h2>
+                <div class="game-description">
+                    <p>Investigate targets using open-source intelligence (OSINT) techniques.</p>
+                    <p>Piece together information from social media profiles, forum posts, and public records to answer questions about your target.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• OSINT Investigation</div>
+                        <div class="stat-item">• Multiple Targets</div>
+                        <div class="stat-item">• Time-based Challenges</div>
+                        <div class="stat-item">• Progressive Difficulty</div>
+                    </div>
+                </div>
+                <a href="/hacking-games/dox.html" class="game-link">PLAY NOW</a>
+            </div>
+            
+            <div class="game-card">
+                <h2 class="game-title">PHISHING EXPEDITION <span class="difficulty-badge difficulty-beginner">BEGINNER</span></h2>
+                <div class="game-description">
+                    <p>Identify phishing emails from legitimate ones in this fast-paced email analysis game.</p>
+                    <p>You have 60 seconds to identify as many emails as possible - each correct answer earns points, wrong answers cost lives!</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Email Analysis</div>
+                        <div class="stat-item">• 60-Second Rounds</div>
+                        <div class="stat-item">• Progressive Difficulty</div>
+                        <div class="stat-item">• Lives System</div>
+                    </div>
+                </div>
+                <a href="/hacking-games/phishing.html" class="game-link">PLAY NOW</a>
+            </div>
+            
+            <div class="game-card">
+                <h2 class="game-title">PACKET SNIFFER <span class="difficulty-badge difficulty-advanced">ADVANCED</span></h2>
+                <div class="game-description">
+                    <p>Intercept and decode hidden messages from captured network packets.</p>
+                    <p>Use analysis tools to extract intelligence from raw network data and uncover secrets in the traffic.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Network Analysis</div>
+                        <div class="stat-item">• Protocol Decoding</div>
+                        <div class="stat-item">• Data Extraction</div>
+                        <div class="stat-item">• Pattern Recognition</div>
+                    </div>
+                </div>
+                <a href="/hacking-games/packetsniffer.html" class="game-link">PLAY NOW</a>
+            </div>
+            
+            <div class="game-card">
+                <h2 class="game-title">FIREWALL BREACH <span class="difficulty-badge difficulty-expert">EXPERT</span></h2>
+                <div class="game-description">
+                    <p>Penetrate corporate firewalls using advanced exploitation techniques.</p>
+                    <p>Find vulnerabilities in network security, bypass intrusion detection systems, and access secured systems without triggering alarms.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Network Penetration Commands</div>
+                        <div class="stat-item">• Vulnerability Exploitation Commands</div>
+                        <div class="stat-item">• Stealth Operation Commands</div>
+                        <div class="stat-item">• IDS Evasion Commands</div>
+                    </div>
+                </div>
+                <a href="/hacking-games/firewall.html" class="game-link">PLAY NOW</a>
+            </div>
+            
+            <!--<div class="game-card coming-soon">
+                <h2 class="game-title">CRYPTO CRACKER <span class="difficulty-badge difficulty-advanced">ADVANCED</span></h2>
+                <div class="game-description">
+                    <p>Break encrypted messages using cryptographic analysis and code-breaking techniques.</p>
+                    <p>Solve complex ciphers from classical encryption to modern cryptographic challenges.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Cryptography</div>
+                        <div class="stat-item">• Multiple Cipher Types</div>
+                        <div class="stat-item">• Progressive Complexity</div>
+                        <div class="stat-item">• Historical & Modern</div>
+                    </div>
+                </div>
+                <a href="#" class="game-link">COMING SOON</a>
+            </div>
+            
+            <div class="game-card coming-soon">
+                <h2 class="game-title">SOCIAL ENGINEERING <span class="difficulty-badge difficulty-intermediate">INTERMEDIATE</span></h2>
+                <div class="game-description">
+                    <p>Manipulate targets to reveal sensitive information through psychological techniques.</p>
+                    <p>Learn to bypass security measures by understanding human behavior and social dynamics.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Psychology</div>
+                        <div class="stat-item">• Social Dynamics</div>
+                        <div class="stat-item">• Information Extraction</div>
+                        <div class="stat-item">• Scenario-based</div>
+                    </div>
+                </div>
+                <a href="#" class="game-link">COMING SOON</a>
+            </div>
+            
+            <div class="game-card coming-soon">
+                <h2 class="game-title">MALWARE ANALYSIS <span class="difficulty-badge difficulty-expert">EXPERT</span></h2>
+                <div class="game-description">
+                    <p>Reverse engineer malicious software to understand its behavior and develop detection methods.</p>
+                    <p>Analyze code, identify payloads, and create detection signatures in safe, controlled environments.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Reverse Engineering</div>
+                        <div class="stat-item">• Code Analysis</div>
+                        <div class="stat-item">• Sandboxed Environment</div>
+                        <div class="stat-item">• Signature Development</div>
+                    </div>
+                </div>
+                <a href="#" class="game-link">COMING SOON</a>
+            </div>
+            
+            <div class="game-card coming-soon">
+                <h2 class="game-title">WIRELESS WARFARE <span class="difficulty-badge difficulty-advanced">ADVANCED</span></h2>
+                <div class="game-description">
+                    <p>Master wireless network security through hands-on attack and defense scenarios.</p>
+                    <p>From WiFi cracking to Bluetooth exploitation and RFID security testing.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Wireless Security</div>
+                        <div class="stat-item">• Multiple Protocols</div>
+                        <div class="stat-item">• Attack & Defense</div>
+                        <div class="stat-item">• Real Hardware Simulation</div>
+                    </div>
+                </div>
+                <a href="#" class="game-link">COMING SOON</a>
+            </div>
+            
+            <div class="game-card coming-soon">
+                <h2 class="game-title">INCIDENT RESPONSE <span class="difficulty-badge difficulty-intermediate">INTERMEDIATE</span></h2>
+                <div class="game-description">
+                    <p>Manage security incidents from detection to containment and recovery.</p>
+                    <p>Make critical decisions under pressure to minimize damage and restore operations.</p>
+                </div>
+                <div class="game-category">
+                    <div class="game-stats">
+                        <div class="stat-item">• Incident Management</div>
+                        <div class="stat-item">• Decision Making</div>
+                        <div class="stat-item">• Time Pressure</div>
+                        <div class="stat-item">• Multiple Scenarios</div>
+                    </div>
+                </div>
+                <a href="#" class="game-link">COMING SOON</a>
+            </div>-->
+        </div>
+        
+        <footer>
+            <p>HACKER-GAMES TRAINING PLATFORM</p>
+            <p>FOR EDUCATIONAL AND TRAINING PURPOSES ONLY</p>
+        </footer>
+    </div>
+ <script src="desktop-main.js"></script>
+
+
+</body>
+</html>
