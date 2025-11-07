@@ -35,9 +35,3 @@ A typing game where you must quickly and accurately type cybersecurity-related c
 ## How to Play
 
 Simply open the `index.html` file in your web browser to access the main menu and select a game to play.
-
-## For the Repository Description
-
-Here is a suggested description for your GitHub repository:
-
-> A suite of four educational cybersecurity games: OSINT Investigation, Phishing Detection, Network Forensics, and a Command-Line Typing game.
