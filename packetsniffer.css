@@ -1,0 +1,476 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 40, 0, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 40, 0, 0.1) 0%, transparent 20%);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #003300;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            color: #00aa00;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .game-info {
+            background-color: #001100;
+            border: 1px solid #003300;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .game-info h2 {
+            color: #00ff00;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .game-info p {
+            margin-bottom: 10px;
+            color: #00cc00;
+        }
+        
+        .difficulty-selector {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .difficulty-btn {
+            background-color: #002200;
+            color: #00aa00;
+            border: 1px solid #004400;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            flex: 1;
+            text-align: center;
+            max-width: 150px;
+        }
+        
+        .difficulty-btn:hover {
+            background-color: #003300;
+            border-color: #00aa00;
+        }
+        
+        .difficulty-btn.active {
+            background-color: #004400;
+            color: #00ff00;
+            border-color: #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+        
+        .noob-btn.active {
+            background-color: #004400;
+            border-color: #00ff00;
+        }
+        
+        .pro-btn.active {
+            background-color: #004400;
+            border-color: #ffaa00;
+        }
+        
+        .elite-btn.active {
+            background-color: #004400;
+            border-color: #ff3300;
+        }
+        
+        .packet-display {
+            background-color: #001100;
+            border: 1px solid #003300;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 300px;
+            overflow-y: auto;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+        }
+        
+        .packet-header {
+            color: #00aaff;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #003300;
+        }
+        
+        .hex-dump {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        
+        .hex-line {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        
+        .offset {
+            color: #00aa00;
+            width: 60px;
+            margin-right: 15px;
+        }
+        
+        .hex-bytes {
+            color: #00ff00;
+            margin-right: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .tools-panel {
+            background-color: #001100;
+            border: 1px solid #003300;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .tools-panel h3 {
+            color: #00ff00;
+            margin-bottom: 15px;
+        }
+        
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .tool-btn {
+            background-color: #002200;
+            color: #00aa00;
+            border: 1px solid #004400;
+            padding: 8px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .tool-btn:hover {
+            background-color: #003300;
+            border-color: #00aa00;
+        }
+        
+        .tool-btn.active {
+            background-color: #004400;
+            color: #00ff00;
+            border-color: #00ff00;
+        }
+        
+        .key-input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: center;
+            display: none;
+        }
+        
+        .key-input-group input {
+            flex: 1;
+            background-color: #002200;
+            border: 1px solid #004400;
+            color: #00ff00;
+            padding: 8px 12px;
+            border-radius: 3px;
+            font-size: 1rem;
+        }
+        
+        .key-input-group input:focus {
+            outline: none;
+            border-color: #00aa00;
+        }
+        
+        .key-input-group button {
+            background-color: #003300;
+            color: #00ff00;
+            border: 1px solid #00aa00;
+            padding: 8px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .key-input-group button:hover {
+            background-color: #004400;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .input-group input {
+            flex: 1;
+            background-color: #002200;
+            border: 1px solid #004400;
+            color: #00ff00;
+            padding: 8px 12px;
+            border-radius: 3px;
+            font-size: 1rem;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #00aa00;
+        }
+        
+        .input-group button {
+            background-color: #003300;
+            color: #00ff00;
+            border: 1px solid #00aa00;
+            padding: 8px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .input-group button:hover {
+            background-color: #004400;
+        }
+        
+        .hint-box {
+            background-color: #001a00;
+            border: 1px solid #005500;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #00cc00;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background-color: #001100;
+            border: 1px solid #003300;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            color: #00ff00;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #00aa00;
+            font-size: 0.9rem;
+        }
+        
+        .progress-container {
+            background-color: #001100;
+            border: 1px solid #003300;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background-color: #002200;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, #003300, #00aa00, #00ff00);
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .progress-text {
+            text-align: center;
+            color: #00cc00;
+            font-size: 0.9rem;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        button {
+            background-color: #003300;
+            color: #00ff00;
+            border: 1px solid #00aa00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background-color: #004400;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+        }
+        
+        .success {
+            color: #00ff00;
+        }
+        
+        .error {
+            color: #ff3300;
+        }
+        
+        .warning {
+            color: #ffaa00;
+        }
+        
+        .system {
+            color: #00aaff;
+        }
+        
+        .glitch {
+            position: relative;
+        }
+        
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .stat-box {
+                margin: 5px 0;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .difficulty-selector {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .difficulty-btn {
+                max-width: 200px;
+                width: 100%;
+            }
+            
+            .tool-buttons {
+                flex-direction: column;
+            }
+        }
+
+        .difficulty-info {
+            background-color: #001100;
+            border: 1px solid #003300;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .message-log {
+            background-color: #000a00;
+            border: 1px solid #002200;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 15px;
+            height: 100px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+        }
+        
+        .log-entry {
+            margin-bottom: 5px;
+            padding: 3px 0;
+        }
+        
+        .waiting-message {
+            text-align: center;
+            color: #666666;
+            font-style: italic;
+            margin-top: 50px;
+        }
+        
+        .auto-fill-btn {
+            background-color: #003300;
+            color: #00aa00;
+            border: 1px solid #004400;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        
+        .auto-fill-btn:hover {
+            background-color: #004400;
+        }
+
+        .drag-mode {
+            cursor: grabbing;
+        }
+
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.1;
+        }
