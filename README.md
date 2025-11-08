@@ -99,6 +99,4 @@ Contributions are welcome! If you have suggestions for new games, improvements t
 5.  Push to the branch (`git push origin feature/YourFeature`).
 6.  Open a Pull Request.
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details (Note: A `LICENSE.md` file does not currently exist in the repository. It is recommended to add one).
