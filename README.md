@@ -2,6 +2,10 @@
 
 A collection of interactive web-based games designed to teach and test cybersecurity skills in a fun and engaging way. This suite is perfect for beginners looking to understand core cybersecurity concepts and for enthusiasts wanting to sharpen their skills.
 
+## Live Demo
+
+Experience the Hacker Game Suite at: [https://www.brainphreak.net/code/hacker-game-suite/](https://www.brainphreak.net/code/hacker-game-suite/)
+
 ## Features
 
 - **Four Engaging Games:** Dive into different aspects of cybersecurity with unique challenges.
