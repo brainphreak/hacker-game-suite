@@ -6,6 +6,8 @@ A collection of interactive web-based games designed to teach and test cybersecu
 
 Experience the Hacker Game Suite at: [https://www.brainphreak.net/code/hacker-game-suite/](https://www.brainphreak.net/code/hacker-game-suite/)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F2F35TO7X)
+
 ## Features
 
 - **Four Engaging Games:** Dive into different aspects of cybersecurity with unique challenges.
@@ -88,15 +90,5 @@ The project is organized as follows:
 3.  **Open `index.html`:**
     Simply open the `index.html` file in your preferred web browser. This will load the main menu, from which you can select any of the games to play.
 
-## Contributing
-
-Contributions are welcome! If you have suggestions for new games, improvements to existing ones, or bug fixes, please feel free to:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/YourFeature`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add new feature'`).
-5.  Push to the branch (`git push origin feature/YourFeature`).
-6.  Open a Pull Request.
 
 
